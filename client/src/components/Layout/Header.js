@@ -63,7 +63,7 @@ const Header = () => {
                                         </Link>
                                     </li>
                                     {semesters?.map((c) => (
-                                        <li>
+                                        <li key={c._id}>
                                             <Link
                                                 className="dropdown-item"
                                                 to={`/semester/${c.slug}`}

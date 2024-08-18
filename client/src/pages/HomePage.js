@@ -158,7 +158,7 @@ const HomePage = () => {
                     <h1 className="text-center">All Books</h1>
                     <div className="d-flex flex-wrap">
                         {books?.map((p) => (
-                            <div className="card m-2" style={{ width: "18rem" }}>
+                            <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
                                 <img
                                     src={`${process.env.REACT_APP_API}/api/v1/book/book-photo/${p._id}`}
                                     className="card-img-top"
@@ -171,7 +171,7 @@ const HomePage = () => {
                                     </p>
                                     <p className="card-text"> ₹ {p.price}</p>
                                     <button
-                                        class="btn btn-primary ms-1"
+                                        className="btn btn-primary ms-1"
                                         onClick={() => navigate(`/book/${p.slug}`)}
                                     >
                                         More Details
