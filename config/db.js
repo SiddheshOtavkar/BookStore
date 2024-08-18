@@ -1,8 +1,9 @@
 import mongoose from "mongoose";
 import colors from "colors";
+import dotenv from "dotenv";
 
 const connectDB = async () => {
-    const conn = await mongoose.connect("mongodb://0.0.0.0:27017/BookStore")
+    const conn = await mongoose.connect(process.env.MONGO_URI);
     if (conn) {
         // console.log("Connected successfully to Database");
         // console.log(`Connected to Mongodb Database ${conn.connection.host}`.bgMagenta.white);
