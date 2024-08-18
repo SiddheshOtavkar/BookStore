@@ -20,7 +20,7 @@ connectDB();
 const app = express();
 
 const __dirname = path.resolve();
-console.log(__dirname);
+// console.log(__dirname);
 
 //middelwares
 app.use(cors());
