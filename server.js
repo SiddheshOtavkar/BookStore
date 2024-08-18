@@ -10,7 +10,8 @@ import cors from 'cors';
 import path from 'path';
 
 //configure env
-dotenv.config({ path: "configenv/.env" });
+// dotenv.config({ path: "configenv/.env" });
+dotenv.config();
 
 //databse config
 connectDB();
